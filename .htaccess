@@ -1,0 +1,24 @@
+# NEO API variable
+SetEnv ENVIROMENT Dev
+
+<ifModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteBase /
+
+	# --------------
+	# API routes
+	# --------------
+	RewriteRule ^api/(.*)$ api/$1 [L,NC]
+
+	# --------------
+	# Production: Angular routes
+	#   * htaccess in subfolder will take care of routing for AngularJS
+	# --------------
+	#RewriteRule ^(.*)$ /dist/$1 [NC,L]
+
+	# --------------
+	# Staging: Node.js proxy
+	# --------------
+	RewriteRule ^(.*)$ http://localhost:9000/$1 [NC,L,P]
+
+</ifModule>

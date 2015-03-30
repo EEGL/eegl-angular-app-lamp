@@ -1,0 +1,16 @@
+/* -------------------------
+ * Header
+ * ------------------------- */
+
+body > header {
+  position: relative;
+  height: 40px;
+  background-color: gray;
+  z-index: 2;
+
+  .logo {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+}

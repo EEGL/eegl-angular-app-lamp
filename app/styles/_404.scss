@@ -1,0 +1,25 @@
+section.error-page {
+  max-width: $containerMaxWidth;
+  margin-bottom: 140px;
+
+  &, a    { color: #c0c0c0; }
+  a:hover { color: white; }
+
+  h1 {
+    margin-top: 90px;
+    margin-bottom: 30px;
+    span { font-size: 200px; }
+    &:after { content: initial; }
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+  }
+}
