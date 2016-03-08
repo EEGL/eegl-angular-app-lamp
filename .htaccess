@@ -1,5 +1,4 @@
-# NEO API variable
-SetEnv ENVIROMENT Dev
+Satisfy Any
 
 <ifModule mod_rewrite.c>
 	RewriteEngine on
@@ -11,14 +10,22 @@ SetEnv ENVIROMENT Dev
 	RewriteRule ^api/(.*)$ api/$1 [L,NC]
 
 	# --------------
-	# Production: Angular routes
-	#   * htaccess in subfolder will take care of routing for AngularJS
+	# Crawlers
 	# --------------
-	#RewriteRule ^(.*)$ /dist/$1 [NC,L]
+	RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|Pinterest)
+	RewriteRule ^(.*)$ /api/crawler?url=$1 [NC,L]
 
 	# --------------
 	# Staging: Node.js proxy
+	#   checks domain extension, use the proxy if .dev
 	# --------------
+	RewriteCond %{HTTP_HOST} ^(.+)\.(dev)$
 	RewriteRule ^(.*)$ http://localhost:9000/$1 [NC,L,P]
+
+	# --------------
+	# Production: Angular routes
+	#   * htaccess in subfolder will take care of routing for AngularJS
+	# --------------
+	RewriteRule ^(.*)$ /dist/$1 [NC,L]
 
 </ifModule>
