@@ -1,52 +1,31 @@
 {
-  "name": "eegl-angular-app-lamp",
-  "version": "0.9.1",
-  "homepage": "https://github.com/EEGL/eegl-angular-app-lamp",
-  "description": "Opiniated framework based on Angular",
+  "name": "eegl-angular-app",
+  "version": "1.0.0",
   "authors": [
-    "Balazs Szabo <balazs@eegl.me>"
+    "Balazs Szabo <balazs@eegl.co>"
   ],
+  "private": true,
   "devDependencies": {
-    "bootstrap-sass-official": "~3.2.0",
-    "jquery": "~2.1.1",
-    "modernizr": "~2.8.1",
-    "underscore": "~1.6.0",
-    "angular": "~1.3.8",
-    "angular-touch": "~1.3.8",
-    "angular-animate": "~1.3.8",
-    "angular-resource": "~1.3.8",
-    "font-awesome": "~4.2.0",
-    "angular-bootstrap": ">=0.11.0",
-    "angular-sanitize": "~1.3.8",
-    "velocity": "~1.1.0",
-    "angular-images-loaded": "~0.0.5",
-    "moment": "~2.8.4",
-    "angular-ui-router": "~0.2.13",
-    "angular-inview": "~1.5.0",
-    "eegl-ng-seo": "~0.1.0",
-    "eegl-ng-dynamostates": "~0.1.0"
+    "bootstrap-sass-official": "~3.3.6",
+    "jquery": "~2.2.1",
+    "modernizr": "~3.3.1",
+    "underscore": "~1.8.3",
+    "angular": "~1.5.0",
+    "angular-touch": "~1.5.0",
+    "angular-animate": "~1.5.0",
+    "angular-resource": "~1.5.0",
+    "font-awesome": "~4.5.0",
+    "angular-bootstrap": ">=1.2.1",
+    "angular-sanitize": "~1.5.0",
+    "velocity": "~1.2.3",
+    "angular-images-loaded": "~0.1.1",
+    "angular-ui-router": "~0.2.18",
+    "eegl-ng-seo": "~0.1.2",
+    "eegl-ng-dynamostates": "~0.1.2",
+    "moment": "~2.11.2",
+    "lodash": "~4.6.1"
   },
   "resolutions": {
-    "angular": "~1.3.8"
-  },
-  "moduleType": [
-    "angularjs"
-  ],
-  "keywords": [
-    "angular",
-    "seo",
-    "eegl"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "node_modules",
-    "test",
-    "tests",
-    ".tmp",
-    ".sass-cache",
-    "app/bower_components",
-    "test/bower_components",
-    "dist",
-    "*.sublime*"
-  ]
+    "angular": "~1.5.0"
+  }
 }
