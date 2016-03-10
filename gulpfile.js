@@ -81,8 +81,8 @@ gulp.task('fonts', function () {
 
 gulp.task('font-awesome', function () {
   // return $.bowerFiles()
-  return gulp.src(['client/bower_components/font-awesome/fonts/**/*'])
-    .pipe(gulp.dest('dist/fonts/'))
+  return gulp.src(['bower_components/font-awesome/fonts/**/*'])
+    .pipe(gulp.dest('dist/assets/fonts/'))
     .pipe($.size());
 });
 

@@ -14,28 +14,11 @@
      * Public variables
      * -------------------------- */
 
-    var loaded = false
-    if( window.global.ie9 ) { loaded = true }
+    var loaded = window.global.ie9 ? true : false
 
     /* --------------------------
      * Private methods
      * -------------------------- */
-
-    function scrollHandler (section, fromName) {
-      $scope.scrolling = true
-      $timeout(function () {
-        var _el = angular.element('#' + section)
-        var _offset = (_el.data('offset')) ? _el.data('offset') : 0
-        var _top = _el.offset().top - _scrollOffset - _offset
-        scrollTo(_top)
-      }, 100)
-    }
-
-    function scrollTo (_top) {
-      $('html, body').animate({
-        scrollTop: _top
-      }, _scrollSpeed, function () { $scope.scrolling = false } )
-    }
 
     function stateChangeSuccess (event, toState, toParams, from, fromParams) {
       console.log('Route changed...')

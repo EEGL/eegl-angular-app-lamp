@@ -1,0 +1,193 @@
+/* -------------------------
+ * Dependencies
+ * ------------------------- */
+@import "timing";
+@import "variables";
+@import "bootstrap";
+@import "helpers";
+
+/* -------------------------------
+ * Variables
+ * ------------------------------- */
+
+$containerMaxWidth: 1200px;
+$bottomPadding: 82px;
+
+$colorMain: #14a5ed;
+$colorGray: #333;
+$colorRed: #dc0000;
+
+$colorLink: $colorMain;
+
+
+$font: "Helvetica, sans-serif";
+b, strong, .bold { font-weight: 700; }
+
+
+/* -------------------------
+ * Top-level classes
+ * ------------------------- */
+
+html, body {
+    font-family: $font;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    letter-spacing: 0.05em;
+    text-rendering: geometricPrecision;
+}
+
+.container-fluid { max-width: $containerMaxWidth; }
+
+/* -------------------------
+ * Resetting global page elements
+ * ------------------------- */
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+.btn:active,
+.btn:active:focus,
+button:active,
+button:active:focus {
+    box-shadow: none;
+    outline: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* --------------------
+ * Global page elemnts
+ * -------------------- */
+
+body > main {
+    h1, h2, h3, h4 {
+
+    }
+    h1 {  }
+    h2 {  }
+    h3 {  }
+    h4 {  }
+}
+
+@media(max-width: $screen-xs-max) {
+    body > main {
+        h1 {  }
+        h2 {  }
+        p {  }
+    }
+}
+
+/* -------------------------
+ * Form elements styling
+ * ------------------------- */
+
+body > main {
+    input[type=text],
+    input[type=number],
+    input[type=zip],
+    input[type=email],
+    input[type=phone]
+    /*select*/
+    /*    button,
+        button.btn,
+        a.btn*/
+    {
+        &:focus { outline: 0; }
+        $colorPlaceholder:  #666;
+        &::-webkit-input-placeholder { /* WebKit browsers */
+            color: $colorPlaceholder;
+        }
+        &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: $colorPlaceholder;
+            opacity:  1;
+        }
+        &::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: $colorPlaceholder;
+            opacity:  1;
+        }
+        &:-ms-input-placeholder { /* Internet Explorer 10+ */
+            color: $colorPlaceholder;
+        }
+        border: 1px solid black;
+        /*background: none;*/
+        border-radius: 0;
+
+        padding: 3px 12px 0;
+    }
+
+    button[type=submit].btn,
+    a.btn {
+
+    }
+}
+
+
+
+/* -------------------------
+ * Helpers
+ * ------------------------- */
+
+.color-red { color: $colorRed; }
+a.color-red {
+    &, &:active, &:visited { color: $colorRed; }
+}
+a.color-red:hover { color: darken($colorRed, 15%); }
+
+a.underline { border-bottom: 1px dotted black !important; }
+
+.img-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.clickable { cursor: pointer; }
+
+
+/* -------------------------
+ * Sections
+ * ------------------------- */
+
+@import "header";
+@import "footer";
+@import "content";
+@import "404";
+
+
+/* -------------------------------
+ * Media Query detection for JS
+ * ------------------------------- */
+#media-query-detection {
+    display: none;
+    width: 0px;
+}
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) { #media-query-detection { width: 768px; } }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) { #media-query-detection { width: 992px; } }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) { #media-query-detection { width: 1200px; } }

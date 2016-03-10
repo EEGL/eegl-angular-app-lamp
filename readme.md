@@ -5,14 +5,7 @@ This is an opinionated framework consisting of leading open-source technologies 
 ## Frontend setup
 
 The frontend is based on Yeoman's gulp-webapp generator, which means it uses npm, bower and gulp for previewing and building the site.
-To get started you'll need to have node.js, npm, bower and gulp installed. If you have these run, `npm install && bower install` from the root directory to get the dependencies.
-You may need to build modernizr:
-```js
-cd bower_components/modernizr/
-npm install
-./bin/modernizr -c lib/config-all.json
-//outputs to ./modernizr.js
-```
+To get started you'll need to have node.js, npm, bower and gulp installed. Once it's done, run `sh bootstrap.sh` from the root directory, that will initialize the app.
 
 ##  Gulp
 
@@ -48,3 +41,10 @@ There are multiple frameworks that can live under there, including laravel/wordp
 Copyright (c) 2015-2016 EEGL Interactive Kft.
 
 This work is licensed under a [Creative Commons Attribution-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nd/4.0/).
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
